@@ -17,11 +17,11 @@ letterFromNumber 3 = 'C'
 letterFromNumber 4 = 'B'
 letterFromNumber _  = 'Z'
 
--- this do a simple map  using letterFromNumber
+-- this does a simple map  using letterFromNumber
 translate :: Integer -> String -> String
 translate n acc = merge acc [letterFromNumber n]
 
--- this one is fancier as in additin we also filter out the elements > 5
+-- this one is fancier as in addition to map we also filter out the elements > 5
 translateAndFilter :: Integer -> String -> String
 translateAndFilter n acc = if n > 5 then merge acc [letterFromNumber n] else acc
 
