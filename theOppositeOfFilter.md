@@ -1,16 +1,16 @@
-### Lets analize the "Oposite of Filter using Fold" problem
+### Let's analyze the "Oposite of Filter using Fold" problem
 
 ```haskell
 pairIfEven :: Integer -> [Integer]
 pairIfEven i = if even i then [i] else [i-1, i+1]
 ```
 
-Using concatMap we can get the opposite effect to filter, we actually get a higer cardinality...
+Using concatMap we can get the opposite effect of filter, we actually get a higer cardinality...
 ```haskell
 concatMap pairIfEven [1,2,3,4]
 -- [0,2,2,2,4,4]
 ```
-Lets look at the actual implementation of concatMap 
+Let's look at the actual implementation of concatMap 
 
 ```haskell
 concatMap    :: (a -> [b]) -> [a] -> [b]
@@ -41,6 +41,7 @@ class Applicative m => Monad (m :: * -> *) where
 ```
 
 And... this one is called Bind wich is the minimal implementation needed for a Monad
+
 ```haskell
 :i Monad
 class Applicative m => Monad (m :: * -> *) where
