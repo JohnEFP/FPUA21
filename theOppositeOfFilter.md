@@ -52,4 +52,4 @@ class Applicative m => Monad (m :: * -> *) where
   {-# MINIMAL (>>=) #-}
 ```
 
-So... the new question is: "Can we use FoldR to explain Monads?" 
+So... the new question is: "Can we use FoldR to help explain Monads?" 
